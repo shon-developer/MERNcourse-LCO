@@ -88,3 +88,16 @@ userSchema
     return this._password;
   });
 ```
+
+## creating new method `authenticate`
+
+- creating a method to authenticate the user
+- create a function that takes the password from the user
+- return true if it's matching or return false if it's not matching
+- now we have two methods in our `user.Schema` ie authenticate and secure password
+
+```js
+    authenticate: function(plainPassword){
+      return this.securedPassword(plainPassword) === this.encry_password
+    }
+```

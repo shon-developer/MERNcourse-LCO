@@ -60,6 +60,10 @@ userSchema
   });
 
 userSchema.method = {
+  authenticate: function (plainPassword) {
+    return this.securedPassword(plainPassword) === this.encry_password;
+  },
+
   securePassword: function (plainpassword) {
     if (!password) return "";
     try {
