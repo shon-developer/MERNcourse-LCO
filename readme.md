@@ -101,3 +101,14 @@ userSchema
       return this.securedPassword(plainPassword) === this.encry_password
     }
 ```
+
+- to link product schecma to category schema,
+
+```js
+const {ObjectId} = mongoose.Schema
+
+category:{
+  type: ObjectId,
+  ref: "Category"
+}
+```
